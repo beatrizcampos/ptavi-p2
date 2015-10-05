@@ -28,20 +28,22 @@ if __name__ == "__main__":
                     operando = int(operadores[j])
                     resultado = calculadora.suma(resultado, operando)
                     j = j + 1
-            if operacion == "resta":
+            elif operacion == "resta":
                 while j < len(operadores):
                     operando = int(operadores[j])
                     resultado = calculadora.resta(resultado, operando)
                     j = j + 1
-            if operacion == "multiplica":
+            elif operacion == "multiplica":
                 while j < len(operadores):
                     operando = int(operadores[j])
                     resultado = calculadora.multiplicar(resultado, operando)
                     j = j + 1
-            if operacion == "divide":
+            elif operacion == "divide":
                 while j < len(operadores):
                     operando = int(operadores[j])
                     resultado = calculadora.dividir(resultado, operando)
                     j = j + 1
+            else:
+                sys.exit('Sólo puede ser sumar,restar, multiplicar o dividir.')
             print(resultado)
             i = i + 1

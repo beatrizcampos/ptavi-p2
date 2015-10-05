@@ -11,7 +11,8 @@ if __name__ == "__main__":
 
     calculadora = calcoohija.CalculadoraHija()
     fichero = sys.argv[1]
-    with open(fichero, newline = '') as fich:
+
+    with open(fichero, newline='') as fich:
         lineas = csv.reader(fich)
         i = 0
         for linea in lineas:

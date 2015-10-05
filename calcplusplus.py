@@ -27,6 +27,20 @@ if __name__ == "__main__":
                     operando = int(operadores[j])
                     resultado = calculadora.suma(resultado, operando)
                     j = j + 1
+            if operacion == "resta":
+                while j < len(operadores):
+                    operando = int(operadores[j])
+                    resultado = calculadora.resta(resultado, operando)
+                    j = j + 1
+            if operacion == "multiplica":
+                while j < len(operadores):
+                    operando = int(operadores[j])
+                    resultado = calculadora.multiplicar(resultado, operando)
+                    j = j + 1
+            if operacion == "divide":
+                while j < len(operadores):
+                    operando = int(operadores[j])
+                    resultado = calculadora.dividir(resultado, operando)
+                    j = j + 1
             print(resultado)
             i = i + 1
- 

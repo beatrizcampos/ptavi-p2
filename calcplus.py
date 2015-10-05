@@ -8,12 +8,12 @@ import calcoohija
 
 def operaciones(operadores, resultado, operacion, diccionario):
     try:
-        funcion = dicc[operacion]
-        for operando in operandos[1:]:
-            operando = int(operando)
-            result = funcion(result, operando)
-    except:
-        sys.exit('Sólo puede ser sumar,restar, multiplicar o dividir.')
+        operar = diccionario[operacion]
+    except KeyError:
+        sys.exit('Sólo puede ser suma,resta, multiplica o divide.')
+    for operando in operadores[1:]:
+        operando = int(operando)
+        resultado = operar(resultado, operando)
     return resultado
 
 if __name__ == "__main__":

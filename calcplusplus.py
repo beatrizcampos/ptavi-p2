@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import svs
+import csv
 import sys
 import calcoo
 import calcoohija
@@ -11,16 +11,14 @@ if __name__ == "__main__":
 
     calculadora = calcoohija.CalculadoraHija()
     fichero = sys.argv[1]
-    with open(fichero, nuevalínea = '') as csvfichero
-        lineas = csv.reader(csv fichero)
+    with open(fichero, newline = '') as fich:
+        lineas = csv.reader(fich)
         i = 0
-        while i < len(lineas)
-            elementos = linea[i].split(',')
+        for linea in lineas:
             #La operacion es el primer elemento
-            operacion = elementos[0]
+            operacion = linea[0]
             #El resto de elementos son operadores
-            operadores = elementos[1:]
-            operadores[-1] = operadores[-1][:-1]
+            operadores = linea[1:]
             #Hacemos que resultado sea el primer elemento y "operando" el resto
             resultado = int(operadores[0])
             j = 1

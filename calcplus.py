@@ -9,7 +9,6 @@ import calcoohija
 def operaciones(elementos, diccionario):
     operacion = elementos[0]
     operadores = elementos[1:]
-    operadores[-1] = operadores[-1][:-1]
     #Hacemos que resultado sea el primer elemento y "operando" el resto
     resultado = int(operadores[0])
     try:
@@ -31,5 +30,6 @@ if __name__ == "__main__":
                    "divide": calculadora.dividir}
     for linea in lineas:
         elementos = linea.split(',')
+        elementos[-1] = elementos[-1][:-1]
         resultado = operaciones(elementos, diccionario)
         print(resultado)
